@@ -1,5 +1,5 @@
 name: Meetup FIAP
-on: push
+on: [workflow_dispatch]
 jobs:
   snyk:
     runs-on: ubuntu-latest
