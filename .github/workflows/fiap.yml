@@ -1,5 +1,5 @@
 name: Meetup FIAP
-on: [workflow_dispatch, pull_request]
+on: [push, pull_request]
 jobs:
   snyk:
     runs-on: ubuntu-latest
@@ -11,3 +11,10 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           command: monitor
+  zap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ZAP Scan
+        uses: zaproxy/action-baseline@v0.10.0
+        with:
+          target: 'https://juice-shop.herokuapp.com/'
