@@ -10,7 +10,7 @@ jobs: # sequencia de passos que serão executadas
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }} #obtido no snyk.io
         with:
-          command: monitor
+          command: monitor #envia dados para o snyk ao invés do github actions
 #   zap:
 #     runs-on: ubuntu-latest
 #     steps:

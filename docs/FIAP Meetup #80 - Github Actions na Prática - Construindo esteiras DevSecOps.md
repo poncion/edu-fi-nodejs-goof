@@ -80,6 +80,12 @@ Ao acessar snyk.io, é possível criar um token para uso nas actions.
 
 O secret gerado, pode ser utilizado em settings/secrets/actions do repositório e deve ter o mesmo nome da variário utilizada na action.
 
+Os resultados do scanner pode aparecer tanto no github actions quando serem enviados diretamente para o snyk.io, onde podemos ver o resultado em forma de relatório.
+
+Também é possívle ver as dependencias diretas, indiretas e até realizar correções de vulnerabilidades ou ignora-las.
+
+É possível utilizar o snyk para analisar repositórios sem a necessidade de passar por um action.
+
 ## Workflow Dispatch
 
 Dentre os eventos que podem disparar uma action está o workflow_dispatch, ao utiliza-lo o workflow pode ser executado manualmente através de um botão que será disponibilizado pelo github.
