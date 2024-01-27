@@ -69,3 +69,13 @@ São runners criados por você ou sua organização geralmente para trabalhos ma
 > ref: https://github.com/marketplace
 
 Local onde podemos buscar por actions já prontas, são desenvolvidas e disponibilizadas por terceiros. Há diversas categorias, entre elas algumas de segurança, deployment, qualidade de código, etc.
+
+## Snyk
+
+> ref: https://github.com/marketplace/actions/snyk
+
+Plataforma de segurança voltada para desenvolvedores que analisa componentes e dependencias para vericiar se há vulnerabilidades.
+
+Ao acessar snyk.io, é possível criar um token para uso nas actions.
+
+O secret gerado, pode ser utilizado em settings/secrets/actions do repositório e deve ter o mesmo nome da variário utilizada na action.
