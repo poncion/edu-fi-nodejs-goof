@@ -11,10 +11,11 @@ jobs: # sequencia de passos que serão executadas
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }} #obtido no snyk.io
         with:
           command: monitor #envia dados para o snyk ao invés do github actions
-#   zap:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: ZAP Scan
-#         uses: zaproxy/action-baseline@v0.10.0
-#         with:
-#           target: "https://juice-shop.herokuapp.com/"
+  zap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ZAP Scan
+        uses: zaproxy/action-baseline@v0.10.0
+        with:
+          target: "https://juice-shop.herokuapp.com/" #app OWASP para simular aplicação rodando
+          allow_issue_writing: false #desabilitada opção de escrever na guia issues
