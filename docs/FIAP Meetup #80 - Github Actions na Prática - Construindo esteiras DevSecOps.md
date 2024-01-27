@@ -55,3 +55,11 @@ Todos os comandos são executados a partir do arquivo yaml e não podem ser inte
 > ref: https://github.com/actions/checkout
 
 Este repositorio é bastante comum, possui etapas que copiam o repositório atual para dentro de uma maquina virtual para que as validações sejam iniciadas.
+
+## Sobre o runners
+
+Essas máquinas virtuais que rodam na Azure são preparadas para realizarem tarefas de desenvolvimento, se executado o comando `run env` será possível ver uma série de variáveis que podem exemplificar diversas ferramentas na máquina. Dentre as variáveis, há a gitgub token, um token que permite que a máquina faça alterações no repositório.
+
+### Self hosted runners
+
+São runners criados por você ou sua organização geralmente para trabalhos mais sensíveis ou que envolvem regulamentação. Utilizando esse tipo de abordagem, evita-se compartilhamento de informações com serviços terceiros.
