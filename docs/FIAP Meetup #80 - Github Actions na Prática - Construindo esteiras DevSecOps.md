@@ -74,7 +74,7 @@ Local onde podemos buscar por actions já prontas, são desenvolvidas e disponib
 
 > ref: https://github.com/marketplace/actions/snyk
 
-Plataforma de segurança voltada para desenvolvedores que analisa componentes e dependencias para vericiar se há vulnerabilidades.
+Plataforma de segurança voltada para desenvolvedores que analisa componentes e dependencias para verificar se há vulnerabilidades. SCA: _Software composition analysis_.
 
 Ao acessar snyk.io, é possível criar um token para uso nas actions.
 
@@ -89,3 +89,13 @@ Também é possívle ver as dependencias diretas, indiretas e até realizar corr
 ## Workflow Dispatch
 
 Dentre os eventos que podem disparar uma action está o workflow_dispatch, ao utiliza-lo o workflow pode ser executado manualmente através de um botão que será disponibilizado pelo github.
+
+## ZAP Scan
+
+> ref: https://github.com/marketplace/actions/zap-baseline-scan
+
+Permite rodar scans de vulnerabilidades dinamicos na aplicação, DAST. No marketplace é possível encontrar mais de um tipo de Zap Scan. Utilizaremos o baseline.
+
+Para este tipo de analise, será necesario que a aplicação esteja rodando, este repositório não considera este cenário, por isso será realizada uma analise em uma outra aplicação (https://juice-shop.herokuapp.com).
+
+O zap Scan gera um relatório ao final do action e também pode incluir itens na guia issues do repositório.
