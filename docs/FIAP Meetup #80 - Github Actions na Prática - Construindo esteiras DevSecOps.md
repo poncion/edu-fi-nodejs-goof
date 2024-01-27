@@ -63,3 +63,9 @@ Essas máquinas virtuais que rodam na Azure são preparadas para realizarem tare
 ### Self hosted runners
 
 São runners criados por você ou sua organização geralmente para trabalhos mais sensíveis ou que envolvem regulamentação. Utilizando esse tipo de abordagem, evita-se compartilhamento de informações com serviços terceiros.
+
+## Github Marketplace
+
+> ref: https://github.com/marketplace
+
+Local onde podemos buscar por actions já prontas, são desenvolvidas e disponibilizadas por terceiros. Há diversas categorias, entre elas algumas de segurança, deployment, qualidade de código, etc.
