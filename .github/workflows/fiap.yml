@@ -1,20 +1,20 @@
-name: Meetup FIAP
-on: [push, pull_request]
-jobs:
-  snyk:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/node@master
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          command: monitor
-  zap:
-    runs-on: ubuntu-latest
-    steps:
-      - name: ZAP Scan
-        uses: zaproxy/action-baseline@v0.10.0
-        with:
-          target: 'https://juice-shop.herokuapp.com/'
+# name: Meetup FIAP #nome da action
+# on: [push, pull_request] #quando ela deve ser executada
+# jobs: # sequencia de passos que serão executadas
+#   snyk:
+#     runs-on: ubuntu-latest #
+#     steps:
+#       - uses: actions/checkout@master
+#       - name: Run Snyk to check for vulnerabilities
+#         uses: snyk/actions/node@master
+#         env:
+#           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+#         with:
+#           command: monitor
+#   zap:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: ZAP Scan
+#         uses: zaproxy/action-baseline@v0.10.0
+#         with:
+#           target: "https://juice-shop.herokuapp.com/"

@@ -12,6 +12,8 @@ Automações que são criadas para diversos fins, como analisar código, depende
 
 Na prática, uma máquina chamada runner executará a série de ações predefinida por nós.
 
+É gratuito, mas possui limites, pois rodam na como maquinas virtuais na azure.
+
 ## Workflows
 
 Configurações para rodar os jobs, devem ficar na pasta `.github/workflows` e são escritos em arquivos .yaml
@@ -21,3 +23,35 @@ Configurações para rodar os jobs, devem ficar na pasta `.github/workflows` e s
 > ref: https://github.com/magnologan/nodejs-goof
 
 Neste projeto utilizaremos como referencia o `magnologan/nodejs-goof`, um projeto propositalmente com algumas vulnerabilidades e erros.
+
+## Detalhando o workflow
+
+```yaml
+name: GitHub Actions Demo #nome da action
+on: [push] #quando será executada
+jobs: #sequencia de passos que serão executados
+  Explore-GitHub-Actions: #job
+    runs-on: ubuntu-latest #em que tipo de máquina será executada
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v4 # automações públicas e terceiras (user/repository)
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+```
+
+Todos os "run" são comandos sendo executados.
+
+Todos os comandos são executados a partir do arquivo yaml e não podem ser interativos, se precisar de um resultado diferente, o arquivo yaml deve ser alterado novamente.
+
+## Github actions
+
+> ref: https://github.com/actions/checkout
+
+Este repositorio é bastante comum, possui etapas que copiam o repositório atual para dentro de uma maquina virtual para que as validações sejam iniciadas.
