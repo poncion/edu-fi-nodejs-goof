@@ -56,9 +56,13 @@ Todos os comandos são executados a partir do arquivo yaml e não podem ser inte
 
 Este repositorio é bastante comum, possui etapas que copiam o repositório atual para dentro de uma maquina virtual para que as validações sejam iniciadas.
 
+As actions podem ser executadas simnultaneamente ou podem seguir um fluxo.
+
 ## Sobre o runners
 
 Essas máquinas virtuais que rodam na Azure são preparadas para realizarem tarefas de desenvolvimento, se executado o comando `run env` será possível ver uma série de variáveis que podem exemplificar diversas ferramentas na máquina. Dentre as variáveis, há a gitgub token, um token que permite que a máquina faça alterações no repositório.
+
+Os runners podem executar containers e outras funções que permitem deixar autmações mais robustas.
 
 ### Self hosted runners
 
@@ -99,3 +103,7 @@ Permite rodar scans de vulnerabilidades dinamicos na aplicação, DAST. No marke
 Para este tipo de analise, será necesario que a aplicação esteja rodando, este repositório não considera este cenário, por isso será realizada uma analise em uma outra aplicação (https://juice-shop.herokuapp.com).
 
 O zap Scan gera um relatório ao final do action e também pode incluir itens na guia issues do repositório.
+
+## DevSecOps
+
+Neste projeto rápido, aplicamos de forma simples algumas técnicas de DevSecOps para analise de código e aplicação através de actions, rotinas automatizadas preparadas para buscar vunerabilidades que precisam ser corrigidas.
