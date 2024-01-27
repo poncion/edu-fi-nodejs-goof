@@ -79,3 +79,7 @@ Plataforma de segurança voltada para desenvolvedores que analisa componentes e 
 Ao acessar snyk.io, é possível criar um token para uso nas actions.
 
 O secret gerado, pode ser utilizado em settings/secrets/actions do repositório e deve ter o mesmo nome da variário utilizada na action.
+
+## Workflow Dispatch
+
+Dentre os eventos que podem disparar uma action está o workflow_dispatch, ao utiliza-lo o workflow pode ser executado manualmente através de um botão que será disponibilizado pelo github.
